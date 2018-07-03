@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yun.ma.yi.app.module.common.view.ItemEditText2
+        android:id="@+id/tv_activity_name"
+        app:hitText="@string/NECESSARY"
+        app:label="活动名称"
+        app:hitTextColor="@color/main_text_color"
+        app:mEditTextColor="@color/main_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space_x2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="会员专享"
+            android:textColor="@color/goods_text_color"
+            android:textSize="@dimen/ts_large" />
+
+        <ToggleButton
+            android:id="@+id/tg_vip"
+            android:layout_width="@dimen/space_x5"
+            android:layout_height="@dimen/space_x2.5"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toggle_btn"
+            android:checked="false"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:padding="@dimen/space_x2"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="适用实体店"
+            android:textColor="@color/goods_text_color"
+            android:textSize="@dimen/ts_large" />
+        <ToggleButton
+            android:id="@+id/tg_physical_store"
+            android:layout_width="@dimen/space_x5"
+            android:layout_height="@dimen/space_x2.5"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toggle_btn"
+            android:checked="false"
+            android:textOff=""
+            android:textOn="" />
+      </RelativeLayout>
+    <RelativeLayout
+        android:padding="@dimen/space_x2"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="适用蚂蚁小店"
+            android:textColor="@color/goods_text_color"
+            android:textSize="@dimen/ts_large" />
+        <ToggleButton
+            android:id="@+id/tg_mayi_store"
+            android:layout_width="@dimen/space_x5"
+            android:layout_height="@dimen/space_x2.5"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toggle_btn"
+            android:checked="false"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:background="@color/white"
+        android:padding="@dimen/space_x2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="适用现金支付"
+            android:textColor="@color/goods_text_color"
+            android:textSize="@dimen/ts_large" />
+
+        <ToggleButton
+            android:id="@+id/tg_cash_pay"
+            android:layout_width="@dimen/space_x5"
+            android:layout_height="@dimen/space_x2.5"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toggle_btn"
+            android:checked="false"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:padding="@dimen/space_x2"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="适用在线支付"
+            android:textColor="@color/goods_text_color"
+            android:textSize="@dimen/ts_large" />
+        <ToggleButton
+            android:id="@+id/tg_online_pay"
+            android:layout_width="@dimen/space_x5"
+            android:layout_height="@dimen/space_x2.5"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toggle_btn"
+            android:checked="false"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_goods_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:padding="@dimen/space_x2"
+        android:text="指定商品范围"
+        android:textColor="@color/goods_text_color"
+        android:textSize="@dimen/ts_large" />
+
+</LinearLayout>

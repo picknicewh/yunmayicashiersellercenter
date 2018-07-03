@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.member.search.MemberInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_title"
+        android:orientation="vertical">
+
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_member_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="会员名字" />
+
+        <LinearLayout
+            android:id="@+id/ll_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yun.ma.yi.app.module.common.view.ItemTextView
+                android:id="@+id/tv_sex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:mHint="女"
+                app:mHintTextColor="@color/minor_text_color"
+                app:mLabel="性别" />
+
+            <ImageView
+                android:id="@+id/iv_sex_arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space"
+                android:src="@mipmap/ic_arrow_down" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_x0.1"
+            android:background="@color/home_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yun.ma.yi.app.module.common.view.ItemTextView
+                android:id="@+id/tv_birthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:mHintTextColor="@color/minor_text_color"
+                app:mLabel="生日" />
+
+            <ImageView
+                android:id="@+id/iv_birthday_arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space"
+                android:src="@mipmap/ic_arrow_down" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_x0.1"
+            android:background="@color/home_title" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="手机号" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_idard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="身份证" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_card_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="卡类型" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="卡号" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_discount_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="优惠方式" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_discount_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="折扣率（%）" />
+
+        <LinearLayout
+            android:id="@+id/ll_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yun.ma.yi.app.module.common.view.ItemTextView
+                android:id="@+id/tv_balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:mHintTextColor="@color/minor_text_color"
+                app:mLabel="余额" />
+
+            <ImageView
+                android:id="@+id/iv_balance_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_integral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yun.ma.yi.app.module.common.view.ItemTextView
+                android:id="@+id/tv_integral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:mHintTextColor="@color/minor_text_color"
+                app:mLabel="积分" />
+
+            <ImageView
+                android:id="@+id/iv_integral_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+
+            android:id="@+id/tv_card_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="卡状态" />
+
+        <LinearLayout
+            android:id="@+id/ll_trade_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.yun.ma.yi.app.module.common.view.ItemTextView
+                android:id="@+id/tv_trade_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:mHintTextColor="@color/minor_text_color"
+                app:mLabel="交易明细" />
+
+            <ImageView
+                android:id="@+id/iv_trade_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_x3">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/common_conform_btn"
+                android:layout_marginRight="@dimen/space_x2"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_orange_btn"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/tv_conform"
+                style="@style/common_conform_btn"
+                android:background="@drawable/round_red_btn"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

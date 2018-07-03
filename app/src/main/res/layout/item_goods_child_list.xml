@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space">
+
+        <ImageView
+            android:id="@+id/iv_item_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_alignRight="@+id/iv_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_x0.5">
+
+            <TextView
+                android:id="@+id/tv_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@+id/tv_item_name"
+                android:id="@+id/tv_item_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space" />
+
+            <TextView
+                android:layout_below="@+id/tv_item_code"
+                android:id="@+id/tv_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_btn" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_off_shelf"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_off_shelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+</LinearLayout>

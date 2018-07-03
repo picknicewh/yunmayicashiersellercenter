@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/space_x0.1"
+            android:layout_height="match_parent"
+            android:background="@color/divine_line_color" />
+
+        <LinearLayout
+             android:padding="@dimen/space_x0.5"
+             android:orientation="vertical"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2">
+             <TextView
+                 android:id="@+id/tv_goods_name"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:gravity="center"
+                 android:text="百事可乐600ml"
+                 android:textColor="@color/goods_text_color" />
+             <TextView
+
+                 android:id="@+id/tv_goods_barcode"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:layout_marginTop="@dimen/space_x0.3"
+                 android:text="6941305944232"
+                 android:textSize="@dimen/ts_small"
+                 android:textColor="@color/goods_trade_text" />
+         </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/space_x0.1"
+            android:layout_height="match_parent"
+            android:background="@color/divine_line_color" />
+
+        <TextView
+
+            android:id="@+id/tv_goods_count"
+            android:padding="@dimen/space_x0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/red_btn" />
+
+        <View
+            android:layout_width="@dimen/space_x0.1"
+            android:layout_height="match_parent"
+            android:background="@color/divine_line_color" />
+
+        <TextView
+            android:id="@+id/tv_goods_money"
+            android:padding="@dimen/space_x0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="￥7.5"
+            android:textColor="@color/red_btn" />
+
+        <View
+            android:layout_width="@dimen/space_x0.1"
+            android:layout_height="match_parent"
+            android:background="@color/divine_line_color" />
+
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"
+        android:background="@color/divine_line_color" />
+</RelativeLayout>

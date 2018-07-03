@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.yun.ma.yi.app.module.marketing.MarketingManagerActivity">
+    <LinearLayout
+        android:background="@color/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_bargain_goods"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_bargain_goods"
+            android:text="@string/bargain_goods" />
+        <TextView
+            android:id="@+id/tv_full_delivery"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_full_delivery"
+            android:text="@string/full_delivery" />
+        <TextView
+            android:id="@+id/tv_full_cut"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_full_cut"
+            android:text="@string/full_cut" />
+    </LinearLayout>
+</LinearLayout>

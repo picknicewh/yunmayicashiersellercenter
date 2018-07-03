@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.member.common.MemberSearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:background="@color/goods_list_top_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_x2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="会员查询"
+            android:textSize="@dimen/ts_large" />
+
+        <com.yun.ma.yi.app.module.common.ClearEditText
+            android:id="@+id/et_card_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/gray_border_bg"
+            android:gravity="right|center"
+            android:hint="卡号/手机号"
+            android:textSize="@dimen/ts_medium"
+            android:paddingTop="@dimen/space_x0.5"
+            android:paddingBottom="@dimen/space_x0.5"
+            android:inputType="number"
+            android:maxLength="23"
+           android:layout_marginLeft="@dimen/space"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_conform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_x2"
+        android:background="@drawable/round_red_btn"
+        android:gravity="center"
+        android:padding="@dimen/space"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_large" />
+</LinearLayout>

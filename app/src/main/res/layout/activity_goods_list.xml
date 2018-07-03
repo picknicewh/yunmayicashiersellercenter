@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.yun.ma.yi.app.module.goods.list.GoodsListActivity">
+    <RelativeLayout
+        android:id="@+id/rl_scan"
+        android:layout_width="match_parent"
+        android:padding="@dimen/space"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/iv_scan"
+            android:src="@mipmap/scan"
+            android:text="@string/scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_x2"
+            android:paddingRight="@dimen/space_x2"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/space_x0.5"
+            android:drawableTop="@mipmap/scan"/>
+        <TextView
+            android:padding="@dimen/space_x0.5"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_scan"
+            android:id="@+id/tv_code_search"
+            android:paddingLeft="@dimen/space_x0.5"
+            android:background="@drawable/gray_border_bg"
+            android:hint="条形码/商品名称/速记码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+         android:layout_below="@+id/rl_scan"
+        android:layout_height="@dimen/space_x0.1"
+        android:layout_width="match_parent"
+        android:background="@color/divine_line_color" />
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/goods_list_right_bg" />
+
+        <View
+            android:layout_width="@dimen/space_x0.1"
+            android:layout_height="match_parent"
+            android:background="@color/divine_line_color" />
+
+        <com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView
+            android:id="@+id/rv_child_sort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"
+        android:background="@color/divine_line_color" />
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:id="@+id/ll_goods_add"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space">
+
+        <TextView
+            android:id="@+id/tv_add_all"
+            android:gravity="center"
+            android:text="一键上架"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_red"
+            android:layout_marginRight="@dimen/space"
+            android:layout_width="@dimen/space_x6"
+            android:layout_height="@dimen/space_x6" />
+        <TextView
+            android:id="@+id/tv_add"
+            android:gravity="center"
+            android:text="新增"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_green"
+            android:layout_marginRight="@dimen/space"
+            android:layout_width="@dimen/space_x6"
+            android:layout_height="@dimen/space_x6" />
+    </LinearLayout>
+</RelativeLayout>

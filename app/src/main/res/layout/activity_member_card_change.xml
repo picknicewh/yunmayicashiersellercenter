@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.member.search.MemberInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_title"
+        android:orientation="vertical">
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_member_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:mLabel="会员名字"
+            app:mHintTextColor="@color/minor_text_color" />
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHint="女"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="性别" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="生日" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="手机号" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_card_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mLabel="已领卡" />
+        <LinearLayout
+
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:id="@+id/ll_card_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <com.yun.ma.yi.app.module.common.view.ItemTextView
+                android:id="@+id/tv_card_types"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:mHintTextColor="@color/minor_text_color"
+                app:mLabel="更换为" />
+
+            <ImageView
+                android:id="@+id/iv_card_type_arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/space"
+                android:src="@mipmap/ic_arrow_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/space_x2"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:id="@+id/ll_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卡号"
+                android:textSize="@dimen/ts_large"
+                android:textColor="@color/main_text_color"
+                android:drawableRight="@mipmap/ic_mark" />
+            <EditText
+                android:id="@+id/et_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="必填"
+                android:layout_marginLeft="@dimen/space_x2"
+                android:textColor="@color/goods_trade_text"
+                android:textColorHint="@color/minor_text_color"
+                android:textSize="@dimen/ts_medium"
+                android:inputType="number"
+                android:maxLength="7"
+                android:gravity="right"
+                />
+        </LinearLayout>
+        <!--<com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitText="必填"
+            app:hitTextColor="@color/minor_text_color"
+            app:mEditTextColor="@color/goods_trade_text"
+            app:label="卡号" />-->
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_discount_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="优惠方式" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemTextView
+            android:id="@+id/tv_discount_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mHintTextColor="@color/minor_text_color"
+            app:mLabel="折扣率（%）" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_x3">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/common_conform_btn"
+                android:layout_marginRight="@dimen/space_x2"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_orange_btn"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/tv_conform"
+                style="@style/common_conform_btn"
+                android:background="@drawable/round_red_btn"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

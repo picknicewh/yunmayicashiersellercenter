@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <string-array name="goods_sales_type">
+        <item>按销量</item>
+        <item>按销售额</item>
+        <item>按毛利</item>
+    </string-array>
+    <string-array name="goods_sort_name">
+        <item>酒水饮料</item>
+        <item>食品零食</item>
+        <item>日常洗护</item>
+        <item>粮油调味</item>
+        <item>家庭清洁</item>
+    </string-array>
+    <string-array name="goods_second_sort_name">
+        <item>酒类饮品</item>
+        <item>饮用水类</item>
+        <item>饮料饮品</item>
+    </string-array>
+    <string-array name="goods_third_sort_name">
+        <item>白酒</item>
+        <item>啤酒</item>
+        <item>红酒</item>
+        <item>黄酒</item>
+        <item>葡萄酒</item>
+    </string-array>
+    <string-array name="first_cat">
+        <item>一级类目</item>
+    </string-array>
+    <string-array name="second_cat">
+        <item>二级类目</item>
+    </string-array>
+    <string-array name="third_cat">
+        <item>三级类目</item>
+    </string-array>
+
+</resources>

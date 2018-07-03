@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/space_x0.1"
+		android:background="@color/white"
+		android:orientation="horizontal"
+		android:padding="@dimen/space_x2">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/lblName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/username"
+				android:textColor="@color/main_text_color"
+				android:textSize="@dimen/ts_large" />
+			<TextView
+				android:visibility="gone"
+				android:id="@+id/saveTag"
+				style="@style/save_small"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignRight="@+id/lblName"
+				android:background="@drawable/unsave"
+				android:padding="@dimen/space_x0.1"
+				android:text="未保存"
+				android:textColor="@color/white"
+				android:textSize="9sp" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<EditText
+				android:id="@+id/lblVal"
+				style="@style/comment_choose_right_edit"
+				android:hint="@string/NECESSARY" />
+
+			<ImageView
+				android:visibility="gone"
+				android:id="@+id/img"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="@dimen/space"
+				android:src="@mipmap/clear"
+				 />
+		</LinearLayout>
+
+	</LinearLayout>
+	<!--	<FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/saveTag"
+                style="@style/save_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/unsave"
+                android:text="未保存"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/lblName"
+                        style="@style/black_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left|center_vertical"
+                        android:text="aaaa"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/lblName">
+
+                        <EditText
+                            android:id="@+id/lblVal"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right|end|center_vertical"
+                            android:textColor="@color/date"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/clear"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </FrameLayout>-->
+
+	<View
+		android:visibility="gone"
+        android:id="@+id/itemeditline"
+        style="@style/content_hline"
+        android:contentDescription="line" />
+
+</LinearLayout>

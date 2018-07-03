@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/space_x3"
+        android:background="@drawable/round_grey_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_up_red_btn"
+            android:gravity="center"
+            android:padding="@dimen/space_x1.5"
+            android:paddingBottom="@dimen/space"
+            android:text="请选择一键上传商品方式"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_large" />
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/space"
+            android:text="所有商品 "
+            android:textSize="@dimen/ts_large" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_x0.1"
+            android:background="@color/divine_line_color" />
+
+        <TextView
+            android:id="@+id/tv_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/space"
+            android:text="按分类上架"
+            android:textSize="@dimen/ts_large" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_x0.1"
+            android:background="@color/divine_line_color" />
+
+        <TextView
+            android:id="@+id/tv_cance1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/space"
+            android:text="取 消"
+            android:textColor="@color/red_btn"
+            android:textSize="@dimen/ts_large" />
+    </LinearLayout>
+</RelativeLayout>

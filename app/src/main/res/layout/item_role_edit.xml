@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/home_title"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:padding="@dimen/space_x2"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="收银机"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/ts_large" />
+
+            <ToggleButton
+                android:id="@+id/tg_switch"
+                android:layout_width="@dimen/space_x5"
+                android:layout_height="@dimen/space_x2.5"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/toggle_btn"
+                android:checked="false"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_child_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

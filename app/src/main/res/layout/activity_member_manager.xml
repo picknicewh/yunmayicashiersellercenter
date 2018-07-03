@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.yun.ma.yi.app.module.member.MemberManagerActivity">
+
+    <LinearLayout
+        android:background="@color/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_member_search"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/member_search"
+            android:text="@string/member_search" />
+        <TextView
+            android:id="@+id/tv_card_search"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/member_card_search"
+            android:text="@string/member_card_search" />
+        <TextView
+            android:id="@+id/tv_card_grant"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/member_card_grant"
+            android:text="@string/member_card_grant" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_member_recharge"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/member_card_recharge"
+            android:text="@string/member_card_recharge" />
+
+        <TextView
+            android:id="@+id/tv_report_activate"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/member_report_activate"
+            android:text="@string/member_report_activate" />
+        <TextView
+            android:layout_height="match_parent"
+            android:id="@+id/tv_promotion_card"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_promotion_card"
+            android:text="@string/change_member_card" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_modify_password"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/member_modify_password"
+            android:text="@string/member_modify_password" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_give_integral"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/stock_statistic_search"
+            android:text="@string/member_give_integral" />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_integral_exchange_setting"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/stock_statistic_search"
+            android:text="@string/member_integral_exchange_setting" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_recharge_setting"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/stock_statistic_search"
+            android:text="@string/member_recharge_setting" />
+
+        <TextView
+            android:id="@+id/tv_card_recharge"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/stock_statistic_search"
+            android:text="@string/member_integral_exchange" />
+         <TextView
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

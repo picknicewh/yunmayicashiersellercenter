@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+	<LinearLayout
+		android:background="@color/white"
+		android:layout_marginBottom="@dimen/space_x0.1"
+		android:padding="@dimen/space_x2"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:orientation="horizontal"
+			android:layout_height="wrap_content" >
+			<TextView
+				android:id="@+id/lblName"
+				android:layout_gravity="center"
+				android:text="@string/goods_sale_price"
+				android:textSize="@dimen/ts_large"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:padding="@dimen/space_x0.1"
+				android:id="@+id/saveTag"
+				style="@style/save_small"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/unsave"
+				android:text="未保存"
+				android:layout_alignRight="@+id/lblName"
+				android:textColor="@color/white"
+				android:textSize="9sp" />
+
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:orientation="horizontal"
+			android:layout_height="wrap_content" >
+			<EditText
+				android:id="@+id/lblVal"
+				style="@style/comment_choose_edit"
+				android:hint="@string/NECESSARY" />
+
+			<ImageView
+				android:id="@+id/img"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:visibility="gone"
+				android:src="@mipmap/clear" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+    <View
+		android:visibility="gone"
+        android:id="@+id/itemeditline"
+		android:layout_height="@dimen/space_x0.1"
+		android:layout_width="match_parent"
+        android:background="@color/black_light"
+        android:contentDescription="line" />
+</LinearLayout>

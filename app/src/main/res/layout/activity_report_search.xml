@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/home_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_x2"
+        android:paddingBottom="@dimen/space_x2"
+        android:paddingLeft="@dimen/space_x2"
+        android:paddingRight="@dimen/space">
+        <TextView
+            android:id="@+id/source_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/source"
+            android:textColor="@color/black_text_s"
+            android:textSize="@dimen/ts_medium" />
+        <TextView
+            android:id="@+id/source_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black_light"
+            android:textColor="@color/date"
+            android:textSize="@dimen/ts_medium"
+            android:drawableRight="@mipmap/arrow_down"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"
+        android:background="@color/divine_line_color" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_staff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_x2"
+        android:paddingBottom="@dimen/space_x2"
+        android:paddingLeft="@dimen/space_x2"
+        android:paddingRight="@dimen/space">
+        <TextView
+            android:id="@+id/staff_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="员工"
+            android:textColor="@color/black_text_s"
+            android:textSize="@dimen/ts_medium" />
+        <TextView
+            android:id="@+id/staff_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black_light"
+            android:text="全部"
+            android:textColor="@color/date"
+            android:textSize="@dimen/ts_medium"
+            android:drawableRight="@mipmap/arrow_down"/>
+    </LinearLayout>
+    <View
+        android:visibility="gone"
+        android:id="@+id/line_member"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"
+        android:background="@color/divine_line_color" />
+    <LinearLayout
+        android:id="@+id/ll_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_x2"
+        android:paddingBottom="@dimen/space_x2"
+        android:paddingLeft="@dimen/space_x2"
+        android:paddingRight="@dimen/space"
+      >
+
+        <TextView
+            android:id="@+id/start_time_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/start_time"
+            android:textColor="@color/black_text_s"
+            android:textSize="@dimen/ts_medium" />
+
+        <TextView
+            android:id="@+id/start_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black_light"
+            android:textColor="@color/date"
+            android:drawableRight="@mipmap/arrow_down"
+            android:textSize="@dimen/ts_medium" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"
+        android:background="@color/divine_line_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_x2"
+        android:paddingBottom="@dimen/space_x2"
+        android:paddingLeft="@dimen/space_x2"
+        android:paddingRight="@dimen/space">
+
+        <TextView
+            android:id="@+id/end_time_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/end_time"
+            android:textColor="@color/black_text_s"
+            android:textSize="@dimen/ts_medium" />
+
+        <TextView
+            android:id="@+id/end_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/arrow_down"
+            android:textColor="@color/date"
+            android:textColorHint="@color/black_light"
+            android:textSize="@dimen/ts_medium" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"
+        android:background="@color/divine_line_color" />
+     <LinearLayout
+         android:visibility="gone"
+         android:id="@+id/ll_total_type"
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:padding="@dimen/space_x2">
+
+             <TextView
+                 android:id="@+id/type_title"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:text="@string/total_type"
+                 android:textColor="@color/black_text_s"
+                 android:textSize="@dimen/ts_medium" />
+
+             <TextView
+                 android:id="@+id/type_text"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:hint="@string/please_select"
+                 android:textColorHint="@color/black_light"
+                 android:textColor="@color/date"
+                 android:drawableRight="@mipmap/arrow_down"
+                 android:textSize="@dimen/ts_medium" />
+         </LinearLayout>
+
+         <View android:id="@+id/type_view"
+             android:visibility="gone"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/space_x0.1"
+             android:background="@color/divine_line_color" />
+     </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_condition"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/space_x2"
+            android:paddingBottom="@dimen/space_x2"
+            android:paddingLeft="@dimen/space_x2">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="查询条件"
+                android:textColor="@color/black_text_s"
+                android:textSize="@dimen/ts_medium" />
+
+            <com.yun.ma.yi.app.module.common.ClearEditText
+                android:id="@+id/et_condition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:background="@color/home_title"
+                android:textColor="@color/date"
+                android:textColorHint="@color/black_light"
+                android:hint="员工姓名/工号/手机号"
+                android:textSize="@dimen/ts_medium" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_x0.1"
+            android:background="@color/divine_line_color" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/seach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_x2"
+        android:textColor="@color/white"
+        android:background="@drawable/shape"
+        android:text="@string/seach"
+        android:textSize="@dimen/ts_large"/>
+</LinearLayout>

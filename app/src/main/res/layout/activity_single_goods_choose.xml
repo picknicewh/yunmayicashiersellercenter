@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:padding="@dimen/space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:drawableTop="@mipmap/scan"
+                android:paddingLeft="@dimen/space_x2"
+                android:paddingRight="@dimen/space_x2"
+                android:src="@mipmap/scan"
+                android:text="@string/scan" />
+            <com.yun.ma.yi.app.module.common.ClearEditText
+                android:id="@+id/et_code_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/gray_border_bg"
+                android:hint="@string/search_code"
+                android:padding="@dimen/space_x0.5"
+                android:textSize="@dimen/ts_medium" />
+
+            <TextView
+                android:id="@+id/tv_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:paddingLeft="@dimen/space"
+                android:text="查询" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_nodata"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/ts_large"
+            android:text="@string/nothing_to_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView
+            android:id="@+id/pullRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view_sort"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:clickable="true"/>
+</android.support.v4.widget.DrawerLayout>

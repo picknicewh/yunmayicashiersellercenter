@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space"
+    android:layout_marginTop="@dimen/space"
+    android:paddingLeft="@dimen/space_x0.5"
+    android:paddingRight="@dimen/space_x0.5"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:text="@string/toady_profit"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/ts_large" />
+
+    <TextView
+        android:id="@+id/gross_profit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/space_x0.5"
+        android:text="0.00"
+        android:textColor="@color/red_btn"
+        android:textSize="@dimen/ts_xxxxx_large" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_x0.5"
+        android:paddingBottom="@dimen/space">
+
+        <LinearLayout
+            android:id="@+id/ll_cash_income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash_profit"
+                android:textColor="@color/hit_color"
+                android:drawableRight="@mipmap/ic_mark"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/ts_small"/>
+            <TextView
+                android:id="@+id/cash_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="@dimen/space_x4"
+            android:background="#50666666" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_x0.5"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alipay_profit"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/alipay_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="@dimen/space_x4"
+            android:background="#50666666" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_x0.5"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wechat_profit"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/wechat_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_x0.5"
+        android:paddingBottom="@dimen/space">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash_number"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/cash_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="@dimen/space_x4"
+            android:background="#50666666" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_x0.5"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alipay_number"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/alipay_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="@dimen/space_x4"
+            android:background="#50666666" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_x0.5"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wechat_number"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/wechat_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_x0.5"
+        android:paddingBottom="@dimen/space">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sold_goods_number"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/sold_goods_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="@dimen/space_x4"
+            android:background="#50666666" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_x0.5"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sold_sale_total"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/toady_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="@dimen/space_x4"
+            android:background="#50666666" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_x0.5"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/sold_cost_total"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/hit_color" />
+
+            <TextView
+                android:id="@+id/sold_cost_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_x0.5"
+                android:textColor="@color/hit_color" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

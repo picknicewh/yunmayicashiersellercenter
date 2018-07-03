@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@color/black_text"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_x2"
+            android:paddingRight="@dimen/space_x2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sales_number"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_medium" />
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/red_btn"
+                    android:textSize="@dimen/ts_medium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/space_x0.3"
+                android:layout_height="match_parent"
+                android:background="@color/black_text_t" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_sales"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ts_medium" />
+
+                <TextView
+                    android:id="@+id/total_sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/red_btn"
+                    android:textSize="@dimen/ts_medium" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/seach_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/home_title"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/space_x1.5"
+            android:paddingLeft="@dimen/space_x2"
+            android:paddingRight="@dimen/space_x2"
+            android:paddingTop="@dimen/space_x1.5">
+
+
+            <LinearLayout
+                android:id="@+id/scan_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/scan"
+                    android:layout_width="@dimen/space_x2"
+                    android:layout_height="@dimen/space_x2"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/scan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scan"
+                    android:textColor="@color/hit_color"
+                    android:textSize="@dimen/ts_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/space_x0.3"
+                android:paddingLeft="@dimen/space_x1.5"
+                android:paddingRight="@dimen/space_x0.3"
+                android:paddingTop="@dimen/space_x0.3">
+
+                <TextView
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/space_x0.5"
+                    android:paddingRight="@dimen/space_x0.5"
+                    android:text="按销量"
+                    android:textColor="@color/black_light"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/select_type" />
+
+            </LinearLayout>
+
+            <com.yun.ma.yi.app.module.common.ClearEditText
+                android:id="@+id/input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space"
+                android:layout_marginRight="@dimen/space"
+                android:layout_toLeftOf="@id/stype"
+                android:layout_toRightOf="@id/scan_layout"
+                android:background="@drawable/gray_border_bg"
+                android:hint="@string/search_code"
+                android:inputType="text"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_x0.5"
+                android:textColor="@color/black_text_s"
+                android:textColorHint="@color/black_light"
+                android:textSize="@dimen/ts_medium" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="这一时间段没有商品销售报表"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView
+            android:id="@+id/goods_sales_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

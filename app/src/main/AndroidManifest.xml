@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yunmayi.app.manage">
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 摄像头权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.yunmayi.app.manage.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于访问wifi网络信息 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- Required -->
+    <permission
+        android:name="com.yunmayi.app.manage.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <!-- 自动聚焦权限 -->
+    <application
+        android:name="com.yun.ma.yi.app.application.YunmayiApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <!-- 登录 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.Login.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 首页 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.Home.HomeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置 -->
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.setting.UpdatePasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 店铺信息 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.setting.ShopInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 关于 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.setting.AboutInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息中心 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.setting.MessageCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 库存预警 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.setting.InventoryWarningActivity"
+            android:screenOrientation="portrait" />
+        <!-- 帮助，通知中心 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.setting.NoticeCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 帮助 通知详情 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.setting.NoticeDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.ReportManagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 报表检索界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.ReportSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 收款统计报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.statistics.receivables.ReceivablesReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 员工业绩报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.statistics.employee.EmployeeReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品分类报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.goods.GoodsCategoryReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品收益报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.goods.profit.GoodsProfitReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品采购报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.goods.GoodsPurchaseReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品销售报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.goods.sales.GoodsSalesReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品交易流水报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.goods.trade.GoodsTradeReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 库存结存报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.stock.StockBalanceReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 库存盘点报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.stock.StockInventoryReportActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品交易流水详情 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.goods.trade.GoodsTradeDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 扫码 -->
+        <activity
+            android:name="com.yun.ma.yi.app.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品分类界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.goods.sort.parentsort.GoodsSortActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品管理界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.goods.GoodsManagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品二级类目界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.goods.sort.childsort.SecondGoodsSortActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品编辑界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.goods.edit.GoodsEditActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.yun.ma.yi.app.module.common.PermissionsActivity" />
+        <!-- 商品列表界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.goods.list.GoodsListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品搜索界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.goods.search.GoodsSearchActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 库存管理 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.stock.StockManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 库存查询 -->
+        <!-- 库存查询界面 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.stock.search.StockSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 新增盘点 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.stock.add.AddStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品盘点记录 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.stock.statistic.RecordStatisticListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 库存盘点记录 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.stock.statistic.RecordStatisticItemActivity"
+            android:screenOrientation="portrait" />
+        <!-- 库存盘点查询 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.stock.statistic.StockStatisticSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 库存盘点记录详情 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.stock.statistic.RecordStatisticItemDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员管理 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.MemberManagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员搜索 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.search.MemberSearchActivity"
+            android:screenOrientation="portrait" />
+        <!--  -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.search.MemberInfoDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员余额发生明细 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.search.MemberInfoHappenDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员详情 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.search.MemberTotalListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员信息 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.search.MemberInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员卡查询 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.cardsearch.MemberCardSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 新增/编辑会员卡 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.cardsearch.MemberCardEditActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员卡发放 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.cardgrant.MemberCardGrantActivity"
+            android:screenOrientation="portrait" />
+        <!-- 编辑发放会员 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.cardgrant.MemberEditCardInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员卡充值/挂失与激活 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.common.MemberSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.common.ModifyMemberInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.staff.StaffManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.staff.role.RoleChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.staff.role.RoleEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.staff.info.StaffInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.staff.info.StaffInfoEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.staff.role.RuleChildChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.inoutstock.InOutStockManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.inoutstock.in.InStockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.inoutstock.out.OutStockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.inoutstock.in.InStockDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.inoutstock.out.OutStockDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.inoutstock.search.InOutStockSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.inoutstock.search.InoutStockDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.MarketingManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.bargain.BargainGoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.bargain.BargainGoodsEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.cut.FullCutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.delivery.FullDeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.delivery.FullDeliveryEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.cut.FullCutEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.choose.single.SingleGoodsAddChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.choose.single.SingleGoodsEditChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.statistics.inoutwork.InOutWorkListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.statistics.inoutwork.InOutWorkDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.choose.mul.GoodsChooseSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.member.changecard.MemberCardChangeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 营销活动新增/编辑商品 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.marketing.choose.mul.GoodsEditChooseActivity2"
+            android:screenOrientation="portrait" />
+        <!-- 连锁积分报表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.report.integral.IntegralReportActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 蚂蚁小店 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.ShopManagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 店铺商品管理 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.goods.ShopGoodsManagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 申请提现列表 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.cash.ShopOrderCashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.code.ShopEwCodeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 店铺订单管理 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.order.ShopOrderManagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 店铺设置 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.setting.ShopSettingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 店铺订单详情 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.order.ShopOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 申请提现详情 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.cash.ShopOrderCashDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 添加申请提现 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.cash.AddOrderCashActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置定位当前的位置 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.setting.ShopSettingLocationActivity"
+            android:screenOrientation="portrait" />
+        <!-- 编辑蚂蚁小店商品 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.goods.ShopGoodsEditActivity"
+            android:screenOrientation="portrait" />
+        <!-- 添加商品 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.goods.add.ShopGoodsAddActivity"
+            android:screenOrientation="portrait" />
+        <!-- 余额对账 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.balance.BalanceAccountActivity"
+            android:screenOrientation="portrait" />
+        <!-- 余额对账详情 -->
+        <activity
+            android:name="com.yun.ma.yi.app.module.shop.balance.BalanceAccountListActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.yunmayi.app.manage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- 高德地图的AppKey -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9896a199e3f6f66442c038e72f5f1985" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- 将该app注册到微信监听广播 -->
+        <receiver
+            android:name="com.yun.ma.yi.app.module.shop.code.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!-- 微信appKey -->
+        <meta-data
+            android:name="WEIXIN_APP_ID"
+            android:value="wx88e14098eedb2cbf" />
+        <!-- For test only 测试状态通知栏，需要打开的Activity -->
+        <activity
+            android:name="com.yun.ma.yi.app.Jpush.TestActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.yunmayi.app.manage" />
+            </intent-filter>
+        </activity>
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.yunmayi.app.manage" />
+            </intent-filter>
+        </service>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.yunmayi.app.manage" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.yun.ma.yi.app.Jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.yunmayi.app.manage" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name="com.yun.ma.yi.app.Jpush.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.yunmayi.app.manage" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="aaaadd368c5d1860f0a1b65f" /> <!-- </>值来自开发者平台取得的AppKey -->
+
+
+    </application>
+
+</manifest>

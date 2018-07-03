@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.yun.ma.yi.app.module.member.MemberManagerActivity">
+
+    <LinearLayout
+        android:background="@color/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_shop_ewcode"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_shop_ewcode"
+            android:text="@string/shop_ewcode" />
+        <TextView
+            android:id="@+id/tv_shop_settings"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_shop_settings"
+            android:text="@string/shop_settings" />
+        <TextView
+            android:id="@+id/tv_order_manager"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_order_manager"
+            android:text="@string/shop_order_manager" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_goods_manager"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_goods_manager"
+            android:text="@string/shop_goods_manager" />
+
+        <TextView
+            android:id="@+id/tv_order_cash"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_order_cash"
+            android:text="@string/shop_order_cash" />
+        <TextView
+            android:id="@+id/tv_check_count"
+            style="@style/comment_manager_textView"
+            android:drawableTop="@mipmap/ic_check_account"
+            android:text="@string/shop_check_account" />
+    </LinearLayout>
+
+</LinearLayout>

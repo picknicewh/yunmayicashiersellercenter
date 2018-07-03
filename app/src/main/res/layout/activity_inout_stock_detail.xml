@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.inoutstock.search.InoutStockDetailActivity">
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/rv_stock"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+  <TextView
+      android:visibility="gone"
+      android:id="@+id/tv_nodata"
+      android:text="你现在还没有出入库信息哦！"
+      android:gravity="center"
+      android:background="@color/white"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+</LinearLayout>

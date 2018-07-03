@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yun.ma.yi.app.module.marketing.delivery.FullDeliveryEditActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/layout_marketing_common"/>
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_buy_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitText="@string/NECESSARY"
+            app:label="购买金额"
+            app:hitTextColor="@color/main_text_color"
+            app:mEditTextColor="@color/main_text_color"/>
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_cut_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitText="@string/NECESSARY"
+            app:label="减扣金额"
+            app:hitTextColor="@color/main_text_color"
+            app:mEditTextColor="@color/main_text_color"/>
+        <RelativeLayout
+            android:id="@+id/rl_is_top"
+            android:padding="@dimen/space_x2"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="是否封顶"
+                android:textColor="@color/goods_text_color"
+
+                android:textSize="@dimen/ts_large" />
+            <TextView
+                android:id="@+id/tv_is_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:textColor="@color/main_text_color"
+                android:drawableRight="@mipmap/ic_arrow_down"
+                android:text="封顶" />
+        </RelativeLayout>
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_top_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitText="@string/NECESSARY"
+            app:label="封顶金额"
+            app:hitTextColor="@color/main_text_color"
+            app:mEditTextColor="@color/main_text_color"/>
+        <RelativeLayout
+            android:id="@+id/rl_start_time"
+            android:padding="@dimen/space_x2"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="开始日期"
+                android:textColor="@color/goods_text_color"
+                android:textSize="@dimen/ts_large" />
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_text_color"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:drawableRight="@mipmap/ic_arrow_down"
+                android:text="2017-08-30" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_end_time"
+            android:padding="@dimen/space_x2"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="结束日期"
+                android:textColor="@color/goods_text_color"
+                android:textSize="@dimen/ts_large" />
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:textColor="@color/main_text_color"
+                android:drawableRight="@mipmap/ic_arrow_down"
+                android:text="2017-08-30" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_x2">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_delete"
+                style="@style/common_conform_btn"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_orange_btn"
+                android:layout_marginRight="@dimen/space_x2"
+                android:text="@string/delete" />
+
+            <TextView
+                android:id="@+id/tv_conform"
+                style="@style/common_conform_btn"
+                android:background="@drawable/round_red_btn"
+                android:text="@string/save" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

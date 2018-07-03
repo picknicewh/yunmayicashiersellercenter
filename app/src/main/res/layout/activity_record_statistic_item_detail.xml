@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.stock.statistic.RecordStatisticItemDetailActivity">
+   <com.yun.ma.yi.app.module.common.view.ItemTextView
+       android:id="@+id/tv_name"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:mHintTextColor="@color/minor_text_color"
+       app:mLabel="@string/goods_name"/>
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mHintTextColor="@color/minor_text_color"
+        app:mLabel="条形码"/>
+
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mHintTextColor="@color/minor_text_color"
+        app:mLabel="@string/operation_type" />
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_adjust_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mHintTextColor="@color/minor_text_color"
+        app:mLabel="@string/adjust_count"/>
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_adjust_report_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mHintTextColor="@color/minor_text_color"
+        app:mLabel="@string/adjust_report_code"/>
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_adjust_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mHintTextColor="@color/minor_text_color"
+        app:mLabel="@string/adjust_time"/>
+
+ <com.yun.ma.yi.app.module.common.view.ItemTextView
+     android:id="@+id/tv_operator"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:mHintTextColor="@color/minor_text_color"
+     app:mLabel="@string/operator" />
+</LinearLayout>

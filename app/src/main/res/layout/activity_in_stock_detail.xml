@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="@color/home_title"
+    tools:context="com.yun.ma.yi.app.module.inoutstock.in.InStockDetailActivity">
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+           <LinearLayout
+               android:background="@color/white"
+               android:layout_marginBottom="@dimen/space_x0.1"
+               android:padding="@dimen/space_x1.5"
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:text="订单号："
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+               <TextView
+                   android:id="@+id/tv_number"
+                   android:text="1234567898525522"
+                   android:textColor="@color/date"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+
+            <TextView
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/space_x0.1"
+                android:padding="@dimen/space_x1.5"
+                android:id="@+id/tv_status"
+                android:text="订单状态：等待收货"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:padding="@dimen/space_x1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="配送员："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_distributor"
+                    android:text=""
+                    android:textColor="@color/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="联系方式："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_distributor_mobile"
+                    android:text=""
+                    android:textColor="@color/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:padding="@dimen/space_x1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_pay_way"
+                android:text="支付方式：货到付款"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_order_money"
+                android:text="订单总金额：￥15102.56"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/space_x0.1"
+            android:padding="@dimen/space_x1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_pay_money"
+                android:text="订单应付金额：￥980.56"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_actual_money"
+                android:text="订单实付金额：￥980.56"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/space_x2"
+
+        android:id="@+id/rv_goods"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_margin="@dimen/space_x2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_conform"
+            style="@style/common_conform_btn"
+            android:text="@string/confirm"
+            android:background="@drawable/round_red_btn" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

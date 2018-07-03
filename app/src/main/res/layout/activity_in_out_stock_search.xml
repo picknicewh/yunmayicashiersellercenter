@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.inoutstock.search.InOutStockSearchActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_x2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_time" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/arrow_down"
+            android:text="2017-06-24"
+            android:textColor="@color/date" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+    <LinearLayout
+        android:id="@+id/ll_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_x2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/end_time" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/arrow_down"
+            android:text="2017-06-30"
+            android:textColor="@color/date" />
+    </LinearLayout>
+    <View
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+    <LinearLayout
+        android:id="@+id/ll_search_way"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_x2">
+        <TextView
+            android:text="查询方式"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_search_way"
+            android:text="按入库查询"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/date"
+            android:drawableRight="@mipmap/arrow_down"/>
+    </LinearLayout>
+    <View
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_margin="@dimen/space_x3"
+        android:layout_marginBottom="@dimen/space_x3"
+        android:padding="@dimen/space"
+        android:textColor="@color/white"
+        android:text="@string/seach"
+        android:gravity="center"
+        android:textSize="@dimen/ts_large"
+        android:background="@drawable/round_red_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

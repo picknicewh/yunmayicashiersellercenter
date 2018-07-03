@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/item_height">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/head_icon"
+        android:layout_margin="@dimen/space"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:paddingTop="@dimen/space"
+        android:paddingBottom="@dimen/space"
+        android:paddingRight="@dimen/space_x3"
+        android:paddingLeft="@dimen/space_x3"
+        android:layout_marginTop="@dimen/item_height"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@mipmap/name_icon" />
+
+        <com.yun.ma.yi.app.module.common.ClearEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingLeft="@dimen/space"
+            android:paddingRight="@dimen/space"
+            android:maxLength="20"
+            android:ems="10"
+            android:hint="@string/username_hint"
+            android:inputType="textVisiblePassword"
+            android:textColor="@color/black_text_s"
+            android:textColorHint="@color/ColorHint"
+            android:textSize="@dimen/ts_medium" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="@dimen/space_x2"
+        android:layout_marginRight="@dimen/space_x2"
+        android:background="@color/ColorHint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/space"
+        android:paddingBottom="@dimen/space"
+        android:paddingRight="@dimen/space_x3"
+        android:paddingLeft="@dimen/space_x3" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@mipmap/login_password" />
+
+        <com.yun.ma.yi.app.module.common.ClearEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/space"
+            android:paddingRight="@dimen/space"
+            android:inputType="textPassword"
+            android:digits="@string/digits"
+            android:background="@null"
+            android:maxLength="20"
+            android:hint="@string/password_hint"
+            android:textColor="@color/black_text_s"
+            android:textColorHint="@color/ColorHint"
+            android:textSize="@dimen/ts_medium" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="@dimen/space_x2"
+        android:layout_marginRight="@dimen/space_x2"
+        android:background="@color/ColorHint" />
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_x2"
+        android:layout_marginTop="@dimen/space_x3"
+        android:text="@string/login"
+        android:textSize="@dimen/ts_large"
+        android:textColor="@color/white"
+        android:background="@drawable/shape"/>
+
+</LinearLayout>

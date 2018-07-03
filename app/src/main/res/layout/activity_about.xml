@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ts_medium"
+        android:padding="@dimen/space_x1.5"
+        android:textColor="@color/black_text"
+        android:text="        云蚂蚁掌柜是浙江云之涞网络科技有限公司（http://www.yunmayi.com）为使用云蚂蚁收银系统的店主开发的一款辅助工具，提供收银数据报表查询、商品管理、库存管理等功能，方便店主更方便、更快捷的维护和查询数据。"/>
+     <TextView
+         android:paddingRight="@dimen/space_x2"
+         android:layout_gravity="right"
+         android:text="当前的版本为:3.1.4"
+         android:id="@+id/tv_version_code"
+         android:textColor="@color/red_btn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+</LinearLayout>

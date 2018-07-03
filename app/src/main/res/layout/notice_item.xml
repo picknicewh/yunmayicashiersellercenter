@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/notice_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_x2"
+        android:paddingRight="@dimen/space_x2"
+        android:textSize="@dimen/ts_large"
+        android:textColor="@color/black_text_s"
+        android:drawableRight="@mipmap/user_info_arrow_right"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"
+        android:background="@color/home_title"/>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.stock.statistic.RecordStatisticListActivity">
+    <LinearLayout
+        android:padding="@dimen/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/iv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/space_x0.5"
+            android:drawableTop="@mipmap/scan"
+            android:paddingLeft="@dimen/space_x2"
+            android:paddingRight="@dimen/space_x2"
+            android:src="@mipmap/scan"
+            android:textColor="@color/main_text_color"
+            android:text="@string/scan" />
+
+        <com.yun.ma.yi.app.module.common.ClearEditText
+            android:id="@+id/et_code_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/gray_border_bg"
+            android:hint="@string/search_code"
+            android:textColorHint="@color/minor_text_color"
+            android:textSize="@dimen/ts_medium"
+            android:padding="@dimen/space_x0.5" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/space_x0.5"
+            android:paddingLeft="@dimen/space_x2"
+            android:text="   " />
+    </LinearLayout>
+    <View
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/ts_large"
+        android:text="@string/nothing_to_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView
+        android:id="@+id/ptv_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

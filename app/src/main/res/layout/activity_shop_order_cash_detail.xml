@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.shop.cash.ShopOrderCashDetailActivity">
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_order_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="提现金额（元）：" />
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_server_charge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="手续费（元）：" />
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_actual_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="实际到账（元）：" />
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="到账时间：" />
+
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_account_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="账户信息：" />
+
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_accounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="开户人：" />
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_shop_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="账号/小店编号：" />
+</LinearLayout>

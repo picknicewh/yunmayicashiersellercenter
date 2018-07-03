@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:paddingLeft="@dimen/space_x2"
+        android:paddingBottom="@dimen/space"
+        android:paddingTop="@dimen/space"
+        android:paddingRight="@dimen/space_x2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="提现金额(元)："
+                android:textColor="@color/goods_text_color"
+                android:layout_marginRight="@dimen/space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_order_money"
+                android:text="124.5元"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/goods_text_color"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_status"
+                android:text="待处理"
+                android:textColor="@color/goods_trade_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="手  续  费(元)："
+                android:textColor="@color/goods_text_color"
+                android:layout_marginRight="@dimen/space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_server_charge"
+                android:text="1.20"
+                android:textColor="@color/goods_text_color"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ic_arrow_right" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_order_id"
+                android:text="实际到账(元)："
+                android:textColor="@color/goods_text_color"
+                android:layout_marginRight="@dimen/space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_actual_money"
+                android:text="198.80"
+                android:textColor="@color/goods_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/space_x2"/>
+            <TextView
+                android:id="@+id/tv_time"
+                android:text="2017-07-23 13:09:12"
+                android:textColor="@color/goods_text_color"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/ll_detail"
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+</RelativeLayout>

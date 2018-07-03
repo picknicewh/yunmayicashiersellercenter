@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x2"
+            android:layout_marginTop="@dimen/space_x2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/little"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:drawableRight="@mipmap/little"
+                android:text="@string/shop_business_sum"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/ts_large" />
+
+            <ImageView
+                android:id="@+id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_x3"
+                android:paddingLeft="@dimen/space"
+                android:paddingRight="@dimen/space"
+                android:src="@mipmap/user_info_arrow_right"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_marginRight="@dimen/space"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_x0.5"
+            android:paddingLeft="@dimen/space"
+            android:paddingRight="@dimen/space"
+            android:paddingTop="@dimen/space_x0.5">
+
+            <ImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/space_x1.5"
+                android:layout_height="@dimen/space_x1.5"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/user" />
+
+            <TextView
+                android:id="@+id/login_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_x0.5"
+                android:layout_toRightOf="@+id/iv_user"
+                android:text="管理员名称"
+                android:textColor="@color/black_text_s"
+                android:textSize="@dimen/ts_small" />
+
+            <TextView
+                android:id="@+id/week_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/space_x0.5"
+                android:drawableRight="@mipmap/ic_arrow_down"
+                android:gravity="center"
+                android:text="星期五"
+                android:textColor="@color/black_text_s"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/profit" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space"
+            android:background="@color/home_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/space"
+            android:drawableLeft="@mipmap/little"
+            android:drawablePadding="@dimen/space_x0.5"
+            android:drawableRight="@mipmap/little"
+            android:text="@string/operation_day"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/ts_large" />
+
+        <include layout="@layout/layout_home_operation" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

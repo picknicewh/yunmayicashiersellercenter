@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_up_pas"
+        android:icon="@mipmap/setting_pas"
+        android:title="@string/up_pas" />
+    <item
+        android:id="@+id/menu_shop_info"
+        android:icon="@mipmap/shop_nav"
+        android:title="@string/shop_info" />
+    <item
+        android:id="@+id/menu_help_video"
+        android:icon="@mipmap/help_video_nav"
+        android:title="@string/help" />
+
+    <item
+        android:id="@+id/menu_message"
+        android:icon="@mipmap/message_center"
+        android:title="@string/message_center" />
+
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@mipmap/about_nav"
+        android:title="@string/about" />
+</menu>

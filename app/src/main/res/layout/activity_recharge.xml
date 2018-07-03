@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.member.common.ModifyMemberInfoActivity">
+
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_member_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mHint="程静轩"
+        app:mHintTextColor="@color/goods_trade_text"
+        app:mLabel="会员名字" />
+
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_member_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mLabel="手机号"
+        app:mHint="13735484622"
+        app:mHintTextColor="@color/goods_trade_text"/>
+
+    <com.yun.ma.yi.app.module.common.view.ItemTextView
+        android:id="@+id/tv_member_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mHint="57201887"
+        app:mHintTextColor="@color/goods_trade_text"
+        app:mLabel="卡号" />
+    <LinearLayout
+        android:id="@+id/ll_edit"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_recharge_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitText="@string/NECESSARY"
+            app:label="充值金额（元）"
+            app:mInputType="number"
+            app:mMaxLength="6" />
+
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_grant_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="赠送金额（元）"
+            app:hitText="@string/necessary"
+            app:mMaxLength = "6"
+            app:mInputType="number"/>
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/tv_give_integral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="赠送积分"
+            app:hitText="@string/necessary"
+            app:mMaxLength = "6"
+            app:mInputType="number"/>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:padding="@dimen/space_x3"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_marginRight="@dimen/space_x2"
+                android:background="@drawable/round_orange_btn"
+                style="@style/common_conform_btn"
+                android:text="@string/cancel"
+                android:layout_weight="0.5"
+                />
+            <TextView
+                android:id="@+id/tv_conform"
+                style="@style/common_conform_btn"
+                android:background="@drawable/round_red_btn"
+                android:text="@string/confirm"
+                />
+        </LinearLayout>
+    </LinearLayout>
+   <LinearLayout
+       android:id="@+id/ll_text"
+        android:visibility="gone"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <com.yun.ma.yi.app.module.common.view.ItemTextView
+           android:id="@+id/tv_card_status"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:mLabel="卡状态"
+           app:mHint="正常"
+           app:mHintTextColor="@color/goods_trade_text"/>
+       <com.yun.ma.yi.app.module.common.view.ItemTextView
+           android:id="@+id/tv_card_balance"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:mLabel="卡内余额（元）"
+           app:mHint="100"
+           app:mHintTextColor="@color/goods_trade_text"/>
+
+       <com.yun.ma.yi.app.module.common.view.ItemTextView
+           android:id="@+id/tv_card_integral"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:mHint="0"
+           app:mHintTextColor="@color/goods_trade_text"
+           app:mLabel="卡内积分" />
+       <TextView
+           android:layout_margin="@dimen/space_x2"
+           android:id="@+id/tv_report"
+           android:padding="@dimen/space"
+           android:background="@drawable/round_red_btn"
+           android:text="挂失"
+           android:textColor="@color/white"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+   </LinearLayout>
+
+
+
+</LinearLayout>

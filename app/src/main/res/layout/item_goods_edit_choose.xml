@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <RelativeLayout
+         android:background="@color/white"
+         android:layout_marginBottom="@dimen/space_x0.1"
+         android:paddingLeft="@dimen/space_x2"
+         android:paddingRight="@dimen/space_x2"
+         android:paddingTop="@dimen/space"
+         android:paddingBottom="@dimen/space"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <ImageView
+             android:id="@+id/iv_goods_image"
+             android:scaleType="centerCrop"
+             android:layout_width="@dimen/space_x8"
+             android:layout_height="@dimen/space_x8"
+             android:layout_marginRight="@dimen/space"/>
+        <TextView
+            android:layout_marginTop="@dimen/space_x2"
+           android:layout_toRightOf="@+id/iv_goods_image"
+            android:id="@+id/tv_name"
+            android:text="可口可乐330ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text_color"/>
+         <TextView
+             android:layout_marginTop="@dimen/space"
+             android:layout_below="@+id/tv_name"
+             android:layout_toRightOf="@+id/iv_goods_image"
+             android:id="@+id/tv_code"
+             android:text="694124478411"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/minor_text_color"/>
+         <ImageView
+             android:id="@+id/iv_delete"
+             android:checked="true"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:button="@null"
+             android:src="@mipmap/ic_goods_delete"
+             android:layout_width="@dimen/space_x3"
+             android:layout_height="@dimen/space_x3" />
+     </RelativeLayout>
+</RelativeLayout>

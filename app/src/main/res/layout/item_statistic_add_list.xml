@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="@dimen/space"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_image"
+
+            android:scaleType="centerCrop"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_x0.5">
+            <TextView
+
+                android:id="@+id/tv_name"
+                android:textSize="@dimen/ts_small"
+                android:textColor="@color/main_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="@dimen/space_x2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_code"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/ts_small"
+                    android:textColor="@color/minor_text_color"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="库存数:"
+                        android:textColor="@color/red_btn"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/ts_small"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/iv_minus"
+                        android:layout_marginLeft="@dimen/space"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_circle_minus"
+                        android:layout_width="@dimen/space_x2"
+                        android:layout_height="@dimen/space_x2" />
+                    <TextView
+                        android:id="@+id/tv_adjust_count"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textColor="@color/red_btn"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/ts_small"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingRight="@dimen/space_x0.5"/>
+                    <ImageView
+                        android:id="@+id/iv_add"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_circle_add"
+                        android:layout_width="@dimen/space_x2"
+                        android:layout_height="@dimen/space_x2" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="调整前：0"
+                    android:id="@+id/tv_before_adjust"
+                    android:textColor="@color/red_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/ts_small"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="调整后：0"
+                    android:id="@+id/tv_after_adjust"
+                    android:textColor="@color/red_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/ts_small"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+</LinearLayout>

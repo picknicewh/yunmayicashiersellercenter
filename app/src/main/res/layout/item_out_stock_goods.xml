@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/home_title"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingTop="@dimen/space"
+            android:paddingBottom="@dimen/space"
+            android:paddingLeft="@dimen/space_x2"
+            android:paddingRight="@dimen/space_x2"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/tv_order_time"
+                android:layout_marginTop="@dimen/space_x0.5"
+                android:text="下单时间：2017-07-23 19:15"
+                android:textColor="@color/main_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_goods_name"
+                android:layout_marginTop="@dimen/space_x0.5"
+                android:text="商品名称：康师傅茉莉花茶1L*12瓶"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_text_color"/>
+            <TextView
+                android:id="@+id/tv_order_code"
+                android:layout_marginTop="@dimen/space_x0.5"
+                android:text="条形码：6842479921"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_text_color"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_marginRight="@dimen/space_x2"
+            android:textColor="@color/white"
+            android:padding="@dimen/space_x0.5"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/round_grey_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.member.cardgrant.MemberCardGrantActivity">
+    <com.yun.ma.yi.app.module.common.view.ItemEditText2
+        android:id="@+id/tv_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:label="请输入会员手机号码"
+        app:hitText="@string/NECESSARY"
+        app:mMaxLength = "11"
+        app:mInputType="number"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <com.yun.ma.yi.app.module.common.view.ItemEditText2
+            android:id="@+id/et_check_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:label="输入验证码"
+            app:hitText="@string/NECESSARY"
+            app:mMaxLength = "6"
+            app:mInputType="number"
+            />
+         <TextView
+             android:id="@+id/tv_check_number"
+             android:background="@drawable/round_red_btn"
+             android:text="获取验证码"
+             android:textColor="@color/white"
+             android:padding="@dimen/space_x0.5"
+             android:layout_marginLeft="@dimen/space"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="@dimen/space_x2"
+             android:layout_gravity="center"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_x2"
+        android:background="@drawable/round_red_btn"
+        android:gravity="center"
+        android:padding="@dimen/space"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_large" />
+</LinearLayout>

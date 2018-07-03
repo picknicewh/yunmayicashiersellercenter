@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yun.ma.yi.app.module.stock.statistic.RecordStatisticListActivity">
+
+    <include layout="@layout/activity_base_scan"/>
+    <View
+        android:background="@color/divine_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x0.1"/>
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/ts_large"
+
+        android:text="@string/nothing_to_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView
+        android:id="@+id/pullRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/home_title"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:padding="@dimen/space_x2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="收银员1（工号：001）"
+            android:id="@+id/tv_staff_info"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/normal"/>
+        <TextView
+            android:text="实收金额："
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text_color"/>
+        <TextView
+            android:id="@+id/tv_income"
+            android:text="￥100.00"
+            android:textColor="@color/red_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:padding="@dimen/space_x2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/space_x3"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:text="无异常收款，今日收款现金600元，已封装打包，可正常上下班，已留收银备用金300元" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/space_x0.1"
+        android:padding="@dimen/space_x2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="下班时间："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:text="2017年9月2日8:00-"
+            android:textSize="@dimen/ts_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:text="2017年9月2日18:00"
+            android:textSize="@dimen/ts_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    <View
+        android:background="@color/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_x1.5"/>
+</LinearLayout>
